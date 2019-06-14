@@ -73,6 +73,23 @@ public class CharacterTest {
 //        System.out.println((char) ('0' + Math.random() * ('9' - '0' + 1)));
 //        System.out.println((int) (Math.random() * 10));
 
+        
+        /*TIP: Whenever a couple of chars or 1 char and 1 numeric nom are evaluated by Arithmetic Operators
+         It's their UNICODE that is computed not the letters themselves      
+         Here are sample statements*/
+        System.out.println('c' + 'a');
+        System.out.println('c' + 2);
+
+        Scanner input = new Scanner(System.in);
+//      Reading a numeric character from the standard input
+        System.out.print("Enter a digit...\t");
+        char nom = input.next().charAt(0);
+        while (nom < '0' || nom > '9') {
+            System.out.println("Invalid input! Try again...");
+            nom = input.next().charAt(0);
+        }
+//      Displaying the numeric digit in the Console.
+        System.out.printf("The digit is %d.\n", nom - '0');
     }
 
 }
