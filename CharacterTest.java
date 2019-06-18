@@ -90,6 +90,17 @@ public class CharacterTest {
         }
 //      Displaying the numeric digit in the Console.
         System.out.printf("The digit is %d.\n", nom - '0');
+        
+        
+//        In the following code the characters '2' and '0' are implicitly casted to their code value in decimal and then the difference
+//        of them is calculated.
+        int difference = '2' - '0';             // 50 - 48 = 2
+        System.out.println(difference);
+
+//        The same process takes place for the following code but as it turn out the difference value gets implicitly casted to a character data 
+//        type and asigned to the char variable.
+        char c = '2' - '0';                         // 50 - 48 = 2 and then 2 gets casted to a char data type (char) 2.
+        System.out.println(c);              // Number 2 is the code value in decimal of the character single space.
     }
 
 }
